@@ -15,7 +15,8 @@
     "db:studio": "drizzle-kit studio",
     "db:migrate:test": "tsx --env-file .env.test src/infra/db/migrate.ts",
     "pretest": "npm run db:migrate:test",
-    "pretest:watch": "npm run db:migrate:test"
+    "pretest:watch": "pnpm run db:migrate:test",
+    "build": "tsup-node"
   },
   "dependencies": {
     "@aws-sdk/client-s3": "^3.987.0",
@@ -39,6 +40,7 @@
     "@types/node": "^24.10.1",
     "dotenv-cli": "^11.0.0",
     "drizzle-kit": "^0.18.1",
+    "tsup": "^8.5.1",
     "tsx": "^4.21.0",
     "typescript": "^5.9.3",
     "vite-tsconfig-paths": "^6.0.2",
