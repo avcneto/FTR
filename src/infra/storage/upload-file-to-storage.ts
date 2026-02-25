@@ -43,6 +43,6 @@ export async function uploadFileToStorage(input: UploadFileToStorageInput) {
 
   return {
     key: uniqueFileName,
-    url: new URL(uniqueFileName, env.CLAUDFLARE_PUBLIC_URL).toString(),
+    url: new URL(uniqueFileName, env.CLOUDFLARE_PUBLIC_URL).toString(),
   }
 }
